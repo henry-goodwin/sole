@@ -1,0 +1,214 @@
+<style type="text/css">
+    /* Set background colour */
+    body { background: rgb(248,248,250) !important; }
+
+
+    /* Set fill css */
+    .fill { 
+        min-height: 100% !important;
+        height: 100% !important;
+    }
+
+    /* Create border css */
+    #blueBorder { 
+        height:30% !important;
+        width:100% !important;
+        background: rgb(49,201,233);      
+    }
+
+    /* Set sell css */
+    #details {
+        background: white;
+        width: 90% !important;
+    }
+
+    /* Set image sizing */
+    #image {
+        width: 30% !important;
+        height: 30% !important;
+    }
+
+    /* Set image sizing */
+    #file {
+        height: 10% !important;
+    }
+    
+    /* Set image scale */
+    .image_scale {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+</style>
+
+{% extends "layout.html" %}
+
+{% block content %}
+<main>
+    <!-- Create sell container -->
+    <div class="container-fluid">
+        <div class="align-items-center mx-auto jumbotron card shadow-lg rounded-corner" id="details">
+            <div class="content-section w-100">
+                <form method="POST" action="" enctype="multipart/form-data">
+                    {{ form.hidden_tag() }}
+                    <fieldset class="form-group w-100"> 
+                        <div class="form-group">
+                            <!-- Shoe name feild -->
+                            <strong>{{ form.name.label (class="form-control-label")}}
+                            </strong>
+                            {% if form.name.errors %}
+                                {{ form.name(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.name.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.name(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <!-- Shoe name feild -->
+                            <strong>{{ form.brand.label (class="form-control-label")}}
+                            </strong>
+                            {% if form.brand.errors %}
+                                {{ form.brand(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.brand.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.brand(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <br>
+                        
+                        <div class="row">
+                            <!-- Asking price feild -->
+                            <div class="form-group container-fluid col-sm-6">
+                                <!-- Shoe name feild -->
+                                <strong>{{ form.price.label (class="form-control-label")}}
+                                </strong>
+                                {% if form.price.errors %}
+                                    {{ form.price(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.price.errors %}
+                                            <span>Please enter a whole number</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.price(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>
+
+                            <div class="form-group container-fluid col-sm-6">
+                                <!-- Shoe name feild -->
+                                <strong>{{ form.size.label (class="form-control-label")}}
+                                </strong>
+                                {% if form.size.errors %}
+                                    {{ form.size(class="form-control form-control-lg is-invalid") }}
+                                    <div class="invalid-feedback">
+                                        {% for error in form.size.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% else %}
+                                    {{ form.size(class="form-control form-control-lg") }}
+                                {% endif %}
+                            </div>                                
+                        </div> 
+                        <br>
+                        <!-- Shoe condition radio box -->
+                        <div class="form-group">
+                            <!-- Shoe name feild -->
+                            <strong>{{ form.condition.label (class="form-control-label")}}
+                            </strong>
+                            {% if form.condition.errors %}
+                                {{ form.condition(class="is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.condition.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.condition() }}
+                            {% endif %}
+                        </div>
+                        <br>
+                        <!-- Shoe colourway feild -->
+                        <div class="form-group">
+                            <!-- Shoe name feild -->
+                            <strong>{{ form.colour_way.label (class="form-control-label")}}
+                            </strong>
+                            {% if form.colour_way.errors %}
+                                {{ form.colour_way(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.colour_way.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.colour_way(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <br>
+                        <!-- Shoe description text area -->
+                        <div class="form-group">
+                            <!-- Shoe name feild -->
+                            <strong>{{ form.description.label (class="form-control-label")}}
+                            </strong>
+                            {% if form.description.errors %}
+                                {{ form.description(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.description.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.description(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <br>
+                        <!-- Shoe style feild -->
+                        <div class="form-group">
+                            <!-- Shoe name feild -->
+                            <strong>{{ form.style.label (class="form-control-label")}}
+                            </strong>
+                            {% if form.style.errors %}
+                                {{ form.style(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.style.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.style(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <br> 
+                        <div class="form-group h-25">
+                            <strong>{{ form.image.label (class="form-control-label")}}
+                            </strong>
+                            {{ form.image(class="form-control-file") }}
+
+                            {% if form.image.errors %}
+                                {% for error in form.image.errors %}
+                                    <span class="text-danger">{{ error }}</span></br>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </fieldset>
+                    <div class="form-group">
+                        {{ form.submit(class="btn btn-warning btn-lg btn-block") }}
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock content %}
+
+            

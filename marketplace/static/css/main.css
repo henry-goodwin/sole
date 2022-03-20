@@ -1,0 +1,55 @@
+/* Set background colour */
+body { background: rgb(248,248,250) !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+
+/* search bar css */
+#search {
+    background: white;
+    width: 70% !important;
+}
+            
+/* Set html css */
+html, body, main {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+
+/* Set height of view */
+.fill { 
+    min-height: 100% !important;
+    height: 100% !important;
+    width: 100% !important
+}
+
+/* Set border properties */
+#blueBorder { 
+    height:30% !important;
+    width:100% !important;
+    background: rgb(49,201,233);
+}
+
+/* Set card width */
+#card {
+    width: 65% !important;
+}
+
+/* Set details CSS */
+#details {
+    background: white;
+    width: 98% !important;
+}
+
+/* Set image CSS */
+#image {
+    width: 30% !important;
+    height: 30% !important;
+}
+
+/* Set image scaling */
+.image_scale {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}

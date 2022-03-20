@@ -1,0 +1,101 @@
+<style type="text/css">
+    /* Set background colour */
+    body { background: rgb(248,248,250) !important; }
+
+    /* Set fill css */
+    .fill { 
+        min-height: 100% !important;
+        height: 100% !important;
+    }
+
+.JumbotronImage {
+		background-image: url("{{ url_for('static', filename='img/sneakers2.png') }}");
+		background-size: Cover;
+		height: 40%;
+		}
+
+    /* Set border CSS */
+    #blueBorder { 
+        height:30% !important;
+        width:100% !important;
+        background: rgb(49,201,233);      
+    }
+
+    /* Set details CSS */
+    #details {
+        background: white;
+        width: 98% !important;
+    }
+
+    /* Set image CSS */
+    #image {
+        width: 30% !important;
+        height: 30% !important;
+    }
+
+    /* Set image scaling */
+    .image_scale {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+</style>
+
+{% extends "layout.html" %}
+
+{% block content %}
+<main>     
+    <!-- Create jumbotron for content -->
+    <div class="container-fluid">
+        <div class="w-100 d-flex align-items-center mx-auto jumbotron card shadow-lg rounded-corner" id="details">  
+            {% for shoe in shoes %}
+                {% if shoe.sold_status == True %}
+                <!-- Create Card Columns -->
+                <div class="container-fluid card-colums" id="card">
+                    <!-- Create Title Card -->
+                    <div class="card ">
+                        <div class="card-body d-flex align-items-center">
+                            <a href="{{url_for('main.details', shoe_id=shoe.id)}}"><h3 class="text-left text-dark font-weight-bold">{{shoe.name}}</h3></a>
+                        </div>
+                        <!-- Create table card -->
+                        <div class="card table-responsive">
+                            <table class="table table-hover table-bordered">
+                                <!-- Create headings -->
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col">Date Sold</th>
+                                        <th scope="col">Sale Amount</th>
+                                        <th scope="col">Username</th>
+                                        <th scope="col">Contact Details</th>
+                                    </tr>
+                                </thead> 
+                                <tbody>
+                                    <!-- Create data points -->
+                                        {% for bid in shoe.bids %}
+                                            <tr>
+                                                {% if bid.status == "Sold" %}
+
+                                                    <th scope="row">{{bid.sold_date.strftime('%Y-%m-%d')}}</th>
+                                                    <td><p class="text-center">${{bid.amount}}</p></td>
+                                                    <td><p class="text-center">{{bid.bidder.username}}</p></td>
+                                                    <td>
+                                                        <p class="text-center">Email: {{bid.bidder.email}}</p>
+                                                        <p class="text-center">Phone Number: {{bid.phone_number}}</p>
+                                                        
+                                                    </td>
+
+                                                {% endif %}
+                                            </tr>
+                                        {% endfor %}
+                                </tbody>    
+                            </table>
+                        </div> 
+                    </div>
+                </div>
+                <br>
+                {% endif %}
+            {% endfor %}
+        </div>
+</main>
+{% endblock content %}     

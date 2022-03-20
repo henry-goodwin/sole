@@ -1,0 +1,114 @@
+<style type="text/css">
+    /* Set background colour */
+    body { background: rgb(248,248,250) !important; }
+
+    /* Create fill class CSS */
+    .fill { 
+        min-height: 100% !important;
+        height: 100% !important;
+    }
+
+    /* Set blue border CSS */
+    #blueBorder { 
+        height:30% !important;
+        width:100% !important;
+        background: rgb(49,201,233);      
+    }    
+
+    /* Create details CSS */
+    #details {
+        background: white;
+        width: 90% !important;
+    }
+
+    /* Set image scaling */
+    .image_scale {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }    
+</style>
+
+{% extends "layout.html" %}
+
+{% block content %}
+    <main>
+        <!-- Set container jumbotron -->
+        <div class="container-fluid">
+            <div class="d-flex align-items-center mx-auto jumbotron card shadow-lg rounded-corner" id="details">
+                <!-- Create row  -->
+                <div class="row">
+                    <!-- Create column -->
+                    <div class="container col-sm-5">
+                        <!-- Create Jordan 1 image -->
+                        <img class= "img-responsive image_scale" src="{{ url_for('static', filename='img/' + shoe.image_file) }}" alt="{{shoe.name}}" style="object-fit: scale-down;"><br>
+
+                        {% if shoe.sold_status == false %}
+
+                            <div class="content-section w-100">
+                                <form method="POST" action="">
+                                    {{ form.hidden_tag() }}
+                                    <fieldset class="form-group w-100"> 
+                                        <div class="form-group">
+                                            <!-- Shoe name feild -->
+                                            <h5>{{ form.bid_amount.label (class="text-left text-dark font-weight-bold")}}
+                                            </h5>
+                                            {% if form.bid_amount.errors %}
+                                                {{ form.bid_amount(class="form-control  is-invalid") }}
+                                                <div class="invalid-feedback">
+                                                    {% for error in form.bid_amount.errors %}
+                                                        <span>{{ error }}</span>
+                                                    {% endfor %}
+                                                </div>
+                                            {% else %}
+                                                {{ form.bid_amount(class="form-control ") }}
+                                            {% endif %}
+                                        </div>
+
+                                        <div class="form-group">
+                                            <!-- Shoe name feild -->
+                                            <h5>{{ form.phone_number.label (class="text-left text-dark font-weight-bold")}}
+                                            </h5>
+                                            {% if form.phone_number.errors %}
+                                                {{ form.phone_number(class="form-control is-invalid") }}
+                                                <div class="invalid-feedback">
+                                                    {% for error in form.phone_number.errors %}
+                                                        <span>Please enter a valid phone number</span>
+                                                    {% endfor %}
+                                                </div>
+                                            {% else %}
+                                                {{ form.phone_number(class="form-control form-control-md") }}
+                                            {% endif %}
+                                        </div>
+                                    </fieldset>
+                                    <div class="form-group w-100">
+                                        {{ form.submit(class="btn btn-warning  btn-block") }}
+                                    </div>
+                                </form>
+                            </div>
+
+                        {% else %}
+
+                            <h5 class="text-center text-dark font-weight-bold">Item has already been sold</h5>
+
+                        {% endif %}
+
+                    </div>
+                    <!-- Create Shoe info container -->
+                    <div class="container-fluid col-sm-7">
+                        <p><strong>Brand:</strong> {{shoe.brand}}</p>
+                        <p><strong>Price:</strong> ${{shoe.price}}</p>
+                        <p><strong>Size:</strong> {{shoe.size}}</p>
+                        <p><strong>Condition:</strong> {{shoe.condition}}</p>
+                        <p><strong>Colour-way:</strong> {{shoe.colour_way}}</p>
+                        <p><strong>Style:</strong> {{shoe.style}}</p>
+                        <p><strong>Description:</strong>
+                            {{shoe.description}}
+                        </p>
+                    </div>
+                </div>                                
+            </div>
+        </div>
+    </main>
+{% endblock content %}  

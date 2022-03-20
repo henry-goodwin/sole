@@ -1,0 +1,131 @@
+
+
+shoe_1 = Shoe(name='Jordan 1 Retro High Obsidian UNC', price='$572', date_posted='',description='Jordan Brand adds a new colorway to it’s hot streak of Jordan 1
+releases with the Air Jordan 1 “Obsidian / University Blue”, now
+available on StockX. Since its debut in 1985, the Air Jordan 1 has
+been a cultural monument,
+breaking barriers between the court and the streets. Jordan Brand has
+continued to shed new light on this timeless silhouette and does so
+with this release.
+This AJ 1 features a similar design to the “UNC Patent” 1s that
+released in February of 2019, only this time the colorway receives a
+full leather treatment. This sneaker released in August of 2019 and
+retails for $160.', user_id='')
+
+shoe_2 = Shoe(name='adidas Yeezy Boost 350 V2 Semi Frozen Yellow', price='$438', date_posted='', description='The Semi Frozen Yellow adidas Yeezy Boost 350 V2 was rumored as early
+as May of 2017-some blogs even claimed they would be mostly glow-inthe-dark-but it was when photos of Kanye West wearing them first
+surfaced on the web later in the year that confirmed the release. This
+colorway steps outside of the comfort zone of previous 350 Yeezy
+sneaker releases, which have remained subtle and mostly neutral
+primary colors and bright accents. The official colorway of the
+'Frozen Yellow Yeezys' is actually Semi Frozen Yellow, Raw Steel and
+Red and features both of adidas pinnacle technologies, Boost
+cushioning and Primeknit sock-like upper. The hype for the yellow
+colored Yeezys was pushed to the roof before launch as Kanye West
+appeared with Kid Cudi and Takashi Murakami as 'Ye and Cudi toured the
+iconic artist's studio on a trip to Tokyo. In addition, the rumors
+throughout the sneaker world suggested the Frozen Yellow Yeezy would
+be an extremely hard to get release. As expected, the Semi Frozen
+Yellow was announced officially on November 13th, 2017 and released in
+limited quantities on November 18th, 2017. Sizes of the adidas Yeezy
+Boost 350 V2 Semi Frozen Yellow are available now.', user_id='')
+
+shoe_3 = Shoe(name='adidas NMD Hu Pharrell Solar Pack Mother', price='$192', date_posted='', description='Part one of three of Pharrell William's Human Race "Solar Pack," these
+come in a pink, bright blue and yellow colorway. Sporting a pink-based
+Primeknit upper, tribal graphic detailing, the phrase “MOTH3R”
+embroidered down the middle of the sneaker, a Boost cushioned midsole
+and yellow outsole. Their release date was on August of 2018, where
+they were available at select adidas Originals retailers worldwide for
+$250.', user_id='')
+
+shoe_3 = Shoe(name='Jordan 6 Retro Travis Scott', price='$835', date_posted='', description='Trailing the buzz of their recent collaborations, Travis Scott and
+Jordan Brand team up once again for the Jordan 6 Retro Travis Scott,
+now available on StockX. This is the fourth Air Jordan silhouette that
+Cactus Jack has touched. This sneaker made its mainstream debut when
+Travis rocked them on stage during his Super Bowl LIII performance and
+the rest is history.
+This AJ 6 features an olive upper with black detailing and red
+contrasting accents on the tongue and lace locks. A side cargo pocket
+is displayed on the collar, giving this sneaker a design modification
+that makes it the first of its kind. A sail midsole, glow-in-the-dark
+translucent outsole, 3M detailing and both Nike Air and Cactus Jack
+branding on the heel completes the design. These sneakers released in
+October of 2019 for $250.', user_id='')
+
+shoe_4 = Shoe(name='Kyrie 5 Spongebob Squarepants', price='$258', date_posted='', description='Nike enlisted Nickelodeon’s SpongeBob SquarePants for another tvthemed collection, including the Nike Kyrie 5 “SpongeBob”, now
+available on StockX. This is Kyrie’s second tv-themed collaboration,
+the first being a tribute to the sitcom “Friends”. This collection
+consists of three Kyrie 5 models and two Kyrie Low 2s. All of
+SpongeBob’s main cast (SpongeBob, Patrick, Squidward, Mr. Krabs, and
+Sandy) is accounted for in the colorways and design inspiration for
+this collection.
+The Kyrie 5 Spongebob features a porous bright-yellow upper with a red
+and brown sole. The sole was intentionally colored this way to
+represent his everyday outfit. Nickelodeon logos on the straps, a
+sponge-inspired Swoosh, and SpongeBob graphics on the insoles
+completes the design. These sneakers released in August of 2019
+retailed for $130.', user_id='')
+
+shoe_5 = Shoe(name='Nike Zoom Terra Kiger 5 Off-White Black (W)', price='$400', date_posted='', description='Conquer wet, rocky trails in the Nike Air Zoom Terra Kiger 5. Ultralightweight Flymesh joins Nike React foam for a smooth ride. A
+perforated upper helps keep moisture out, while a sticky rubber
+outsole gives multi-directional traction on a variety of surfaces.', user_id='')
+
+shoe_6 = Shoe(name='Jordan 11 Retro Low Pink Snakeskin (W) (2019)', price='$183', date_posted='', description='Summer is finally here, so please grab the Jordan 11 Retro Low Pink
+Snakeskin (W) for those warm weather outfits. This AJ 11 low comes
+with a white upper plus pink and black accents, white midsole, and a
+translucent sole. These sneakers released in May 2019 and retailed for
+$185. Buy these fire pink sneakers on StockX today.', user_id='')
+
+shoe_7 = Shoe(name='Jordan 4 Retro Hot Punch (W)', price='A$192', date_posted='', description='It’s getting hot early in 2019, especially with the Jordan Brand
+celebrating the AJ4 30th anniversary by releasing the Jordan 4 Hot
+Punch (W). This AJ4 comes with a pink upper, black Jumpman logo, pink
+midsole, and pink sole. These sneakers released in January 2019 and
+retailed for $190. Add some true heat to your Jordan 4 collection and
+buy these now on StockX.', user_id='')
+
+shoe_8= Shoe(name='adidas Ultra Boost 4.0 Game of Thrones House Lannister (W)', price='$177', date_posted='', description='Defend your very own kingdom after buying the adidas Ultra Boost 4.0
+Game of Thrones House Lannister (W). This Ultra Boost 4.0 comes with a
+red upper plus black accents, three gold adidas stripes, white
+midsole, and a black sole. These sneakers released in March 2019 and
+retailed for $180. End the Game of Thrones series on the best note and
+cop these now on StockX.', user_id='')
+
+shoe_9 = Shoe(name='Nike Shox TL Comme des Garcons Black (W)', price='$664', date_posted='', description='Shock the haters after copping the Nike Shox TL Comme des Garçons
+Black. This Shox TL comes with a black upper, black Nike “Swoosh”,
+black midsole, and a black sole. These sneakers released in June 2019
+and retailed for $350. Grab these sneakers on StockX today.', user_id='')
+
+shoe_10 = Shoe(name='Kyrie 5 Spongebob Patrick', price='$273', date_posted='', description='Nike enlisted Nickelodeon’s SpongeBob SquarePants for another tvthemed collection, including the Nike Kyrie 5 “Patrick Star”, now
+available on StockX. This is Kyrie’s second tv-themed collaboration,
+the first being a tribute to the sitcom “Friends”. This collection
+consists of three Kyrie 5 models and two Kyrie Low 2s. All of
+SpongeBob’s main cast (SpongeBob, Patrick, Squidward, Mr. Krabs, and
+Sandy) is accounted for in the colorways and design inspiration for
+this collection.
+This Kyrie 5 features a bright pink upper with a green and purple
+sole. The upper has detailing of speckles and texture to represent the
+surface of a starfish. Nickelodeon logos on the straps, title-font
+inspired Nike branding on the heel, and Patrick graphics on the
+insoles completes the design. These sneakers released in August of
+2019 retailed for $130.', user_id='')
+
+shoe_11 = Shoe(name='Jordan 1 Retro High Rookie of the Year', price='$310', date_posted='', description='What better way to celebrate MJ’s rookie of the year award than
+clinching the Jordan 1 Retro High Rookie of the Year. This unique shoe
+comes with a white and harvest leather upper, black Nike “Swoosh”,
+white midsole, and a black sole. While taking a trip down memory lane,
+the sneaker released in October 2018 and retailed for $160. Be as
+unstoppable as Jordan was in 1985 and place a Bid on StockX now.', user_id='')
+
+shoe_12 = Shoe(name='Jordan 11 Retro Win Like 96', price='$406', date_posted='', description='Please note: the Air Jordan 11 Retro Win Like ‘96 sneakers do not
+include 72 wins and a championship banner (sorry to rub it in Warriors
+fans). These 11s were part of a historic NBA season for one of the
+most historic players in the game. Needless to say they are a must own
+for any MJ fan. The shoe features a mix of patent leather, mesh, and
+Zoom Air cushioning, and was released in December of 2017 in a full
+family run of sizes.', user_id='')
+
+shoe_13 = Shoe(name='Air Max 90 Mars Landing', price='$164', date_posted='', description='You can finally reach new levels of galactical swag after buying the
+Air Max 90 Mars Landing. This AM 90 comes with an orange upper, orange
+Nike “Swoosh”, black midsole, and a grey sole. These sneakers released
+in March 2019 and retailed for $160. Create more problems for Houston
+and place a Bid for these on StockX today.', user_id='')

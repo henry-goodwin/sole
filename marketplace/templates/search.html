@@ -1,0 +1,100 @@
+<style type="text/css">
+        /* Set background colour */
+        body { background: rgb(248,248,250) !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+
+        /* search bar css */
+        #search {
+            background: white;
+            width: 70% !important;
+        }
+        
+        /* Set html css */
+        html, body {
+        height: 100%;
+        margin: 0;
+        }
+
+        /* Set height of view */
+        .fill { 
+            min-height: 100% !important;
+            height: 100% !important;
+        }
+
+        /* Set border properties */
+        #blueBorder { 
+            height:30% !important;
+            width:100% !important;
+            background: rgb(49,201,233);
+            
+        }
+
+        /* Set card width */
+        #card {
+            width: 65% !important;
+            height: 15% !important;
+        }
+
+        /* Set image CSS */
+        #image {
+            width: 30% !important;
+            height: 30% !important;
+        }
+
+        /* Set image scaling */
+        .image_scale {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+</style>
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<main>
+<!-- Create Search Field -->
+<div class="container-fluid">
+    <!-- Section for popular shoes -->
+    <div class="card-colums mx-auto" id="card">
+        <div class="card">
+            <div class="card-body d-flex align-items-center">
+                <h3 class="text-left text-dark font-weight-bold">Showing results for '{{query}}':</h3>
+            </div>
+        </div>
+		<div class="wrapper">
+            <div class="card-container">
+                {% if search_results|length > 1 %}
+                    {% for shoe in search_results %}
+                        <!-- Card for Jordans -->
+                        <a class="card" href="{{ url_for('main.details', shoe_id=shoe.id) }}">
+                            <div class="card-body">
+                                <div class="row">
+                                    <img class= "col-sm-3 img-responsive image_scale" src="{{ url_for('static', filename='img/' + shoe.image_file) }}" alt="{{shoe.name}}" style="object-fit: scale-down;">
+                                    <div class="d-flex align-items-center col-sm-8">
+                                        <div class="container-fluid">
+                                                <h5 class="text-left text-dark font-weight-bold">{{shoe.name}}</h5>
+                                                <h5 class="text-left text-dark font-weight-bold">${{shoe.price}}</h5>
+                                        </div>
+                                    </div>
+                                    <img class="col-sm-1" src="{{ url_for('static', filename='img/next.png') }}" alt="Next" style="object-fit: scale-down;">
+                                </div>
+                            </div>
+                        </a>   
+                    {% endfor %}
+                {% else %}
+                    <div class="card">
+                        <br>
+                        <strong class="text-center text-dark font-weight-bold">No Search Results Found</strong>
+                        <br>
+                    </div>
+                {% endif %}
+            </div>
+		</div>
+    </div>
+</div>
+<br>
+</main>
+{% endblock content %}
+

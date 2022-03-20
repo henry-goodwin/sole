@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style type="text/css">
+        /* Set background colour */
+        body { background: rgb(248,248,250) !important; }
+
+        /* Create fill class CSS */
+        .fill { 
+            min-height: 100% !important;
+            height: 100% !important;
+        }
+
+        /* Set blue border CSS */
+        #blueBorder { 
+            height:30% !important;
+            width:100% !important;
+            background: rgb(49,201,233);      
+        }    
+
+        /* Create details CSS */
+        #details {
+            background: white;
+            width: 90% !important;
+        }
+
+        /* Set image scaling */
+        .image_scale {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }    
+    </style>
+
+    <!-- Set HTML header -->
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Details - Sole</title>
+        <meta name="description" content="Details - Sole">
+        <link rel="icon" href="src/img.sole.png">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <header>
+            <!-- Create Navigation Bar-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+
+                    <a class="navbar-brand text-light" href="index.html">
+                        <img src="src/img/logo.png" class="d-inline-block align top" alt="Sole">
+                    </a>
+    
+                <!-- create a button for collapsing the menu -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+    
+                    <!-- individual menu item-->
+                    <div class="nav navbar-nav ml-auto">
+                        <a class="nav-item nav-link text-dark active" href="index.html">Home</a>
+    
+                        <!-- Dropdown using DIV -->
+    
+                        <div class="dropdown">
+                                <a class="nav-item nav-link text-dark dropdown-toggle" data-toggle="dropdown" id="browseDropdown" aria-haspopup="true" aria-expanded="false" href="#">Browse Brands</a>
+                                <div class="dropdown-menu" aria-labelledby="browseDropdown">
+                                    <a class="dropdown-item text-dark" href="#">Adidas</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-dark" href="#">Jordan</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-dark" href="#">Nike</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-dark font-weight-bold" href="#">See All</a>
+                                </div>
+                        </div>
+    
+                        <!-- individual menu item-->
+                        <a class="nav-item nav-link text-dark" href="sell.html">Sell</a>
+    
+                        <a class="nav-item nav-link text-dark" href="manage.html">Manage Bids</a>
+                    </div>
+                </nav>
+        </header>
+
+        <!-- Create fill divider -->
+        <div class="fill">
+            <!-- Set Jordan 1 Title -->
+            <div class="jumbotron d-flex align-items-center" id="blueBorder">
+                <div class="container">
+                    <h2 class="text-center text-light font-weight-bold">Yeezy 350 V2 Lundmark</h2>
+                </div>
+            </div>
+
+            <main>
+                <!-- Set container jumbotron -->
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center mx-auto jumbotron card shadow-lg rounded-corner" id="details">
+                        <!-- Create row  -->
+                        <div class="row">
+                            <!-- Create column -->
+                            <div class="container col-sm-5">
+                                <!-- Create Jordan 1 image -->
+                                <img class= "img-responsive image_scale" src="src/img/yeezy.png" alt="Jordan 1" style="object-fit: scale-down;">
+                                <h5 class="text-left text-dark font-weight-bold">Bid Amount:</h5>
+                                <!-- Create form for submitting bid -->
+                                <form class="form-group">
+                                    <input class="form-control" type="text" placeholder="Bid Amount $" aria-label="Bid">
+                                    <br>
+                                    <button class="btn btn-warning w-100" type="submit">Place Bid</button>
+                                </form>
+                            </div>
+                            <!-- Create Shoe info container -->
+                            <div class="container-fluid col-sm-7">
+                                <p><strong>Brand:</strong> Yeezy</p>
+                                <p><strong>Price:</strong> $325</p>
+                                <p><strong>Size:</strong> 10</p>
+                                <p><strong>Condition:</strong> Used</p>
+                                <p><strong>Colour-way:</strong> Lundmark</p>
+                                <p><strong>Style:</strong> Low Top</p>
+                                <p><strong>Description:</strong> Like newer 350 V2 models, the adidas Yeezy Boost 350 V2 Lundmark sports a subtle summer color with the back heel tab removed. Replacing the SPLY-350 boost stripe that was traditionally found on the original 350s is a transparent stripe that reveals a more cream colored inner. A boost midsole is covered by a light tan rubber outsole that features a pink middle stripe. Adding to the exclusivity of these is the fact this colorway is a North and Latin America exclusive.  </p>
+                            </div>
+                        </div>                                
+                    </div>
+                </div>
+            </main>
+        </div>
+
+    </body>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</html>
